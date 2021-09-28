@@ -1,9 +1,8 @@
 <!-- antes de enviar a versão final, solicitamos que todos os comentários, colocados para orientação ao aluno, sejam removidos do arquivo -->
-# Título do Trabalho
+# Estudo de Detecção de Anomalias em Máquinas de Ar Condicionado
 
-#### Aluno: [Nome Sobrenome](https://github.com/link_do_github)
-#### Orientadora: [Nome Sobrenome](https://github.com/link_do_github) e [Nome Sobrenome](https://github.com/link_do_github).
-#### Co-orientador(/a/es/as): [Nome Sobrenome](https://github.com/link_do_github) e [Nome Sobrenome](https://github.com/link_do_github). <!-- caso não aplicável, remover esta linha -->
+#### Aluno: [Lucas Amaral Lassance Cabral](https://github.com/link_do_github)
+#### Orientadora: [Leonardo Mendoza](https://github.com/link_do_github)
 
 ---
 
@@ -14,9 +13,7 @@ Trabalho apresentado ao curso [BI MASTER](https://ica.puc-rio.ai/bi-master) como
 
 - [Link para a monografia](https://link_da_monografia.com). <!-- caso não aplicável, remover esta linha -->
 
-- Trabalhos relacionados: <!-- caso não aplicável, remover estas linhas -->
-    - [Nome do Trabalho 1](https://link_do_trabalho.com).
-    - [Nome do Trabalho 2](https://link_do_trabalho.com).
+
 
 ---
 
