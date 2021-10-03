@@ -1,5 +1,5 @@
 <!-- antes de enviar a versão final, solicitamos que todos os comentários, colocados para orientação ao aluno, sejam removidos do arquivo -->
-# Estudo de Detecção de Anomalias em Máquinas de Ar Condicionado
+# Análise de Performance e Estudo de Detecção de Anomalias em Máquinas de Ar Condicionado
 
 #### Aluno: [Lucas Amaral Lassance Cabral](https://github.com/link_do_github)
 #### Orientadora: [Leonardo Mendoza](https://github.com/link_do_github)
@@ -21,9 +21,11 @@ Trabalho apresentado ao curso [BI MASTER](https://ica.puc-rio.ai/bi-master) como
 
 <!-- trocar o texto abaixo pelo resumo do trabalho, em português -->
 
-O presente trabalho se destina ao estudo de anomalias em dados coletados de máquinas de ar condicionado do tipo inverter/compressor. A partir de gateways de comunicação ligados às máquinas, foi possível adquirir dados reais de diversas grandezas a serem estudadas.
+O presente trabalho se destina à análise de performance e estudo para detecção de anomalias em dados coletados de máquinas de ar condicionado do tipo inverter/compressor. A partir de gateways de comunicação ligados às máquinas, foi possível adquirir dados reais de diversas grandezas a serem estudadas por três meses.
 
 Máquinas de ar condicionado são muitas vezes itens críticos às operações prediais e industriais e representam no geral, a maior contribuição de consumo de energia dos empreendimentos, além de dispensarem grandes recursos de manutenção e operação, então, usar métodos inteligentes para apontar o melhor uso dos equipamentos aumentando sua performance e vida útil, planejar melhor atividades de manutenção e evitar paradas não planejadas é de grande interesse aos gestores.
+
+A performance da máquina fio estudada através de sua capacidade de manter a temperatura controlada dentro de certos limites definidos.
 
 Foram utilizados métodos puramente estatísticos e algoritmos de machine learning para identificar anomalias presentes nos dados e avaliar os resultados para novas amostras simuladas com anomalias bem definidas. Iniciando por análises de z-core e z-score modificado, passando por clusterização com K-means e DBSCAN e concluindo com Isolation Forest foi possível realizar testes abrangentes e determinar as melhores soluções para o problema de identificação de anomalias. 
 
