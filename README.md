@@ -45,6 +45,8 @@ Máquinas de ar condicionado são grandes aliadas ao conforto dos brasileiros, p
 
 Uma máquina do tipo Inverter, que utiliza uma substância refrigerante para resfriar o ar a ser reinserido no ambiente, foi monitorada por três meses através de gateway próprio do fabricante, fornecendo dados em protocolo aberto Modbus RTU, possibilitando a leitura de seus dados, estruturação das informações e envio de pacotes periódicos para um ambiente em nuvem, onde os dados foram armazenados e posteriormente lidos para análise.
 
+Os dados e resultados obtidos por este estudo foram consolidados em documento Google Docs (disonível no código fonte) para que, em uma extensão deste trabalho, estes resultados sejam aplicados para novas amostras de dados e apresentados ao cliente em forma de relatório.
+
 
 ### 2. Tratamento de Dados
 
@@ -65,17 +67,25 @@ Existem várias formas para análise de performance de máquinas de ar condicion
 - A eficiência foi determinada pela porcentagem de tempo em que a máquina se manteve dentro dos limites
 
 
-### 4. Modelagem
+### 4. Estudos Estatísticos
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar nisl vestibulum tortor fringilla, eget imperdiet neque condimentum. Proin vitae augue in nulla vehicula porttitor sit amet quis sapien. Nam rutrum mollis ligula, et semper justo maximus accumsan. Integer scelerisque egestas arcu, ac laoreet odio aliquet at. Sed sed bibendum dolor. Vestibulum commodo sodales erat, ut placerat nulla vulputate eu. In hac habitasse platea dictumst. Cras interdum bibendum sapien a vehicula.
+Para o início de estudo de dados anômalos, primeiramente foram gerados gráficos de distribuição e de amostras ao longo do tempo para avaliação visual dos registros, assim como um gráfico de correlação entre as variáveis coletadas.
 
-Proin feugiat nulla sem. Phasellus consequat tellus a ex aliquet, quis convallis turpis blandit. Quisque auctor condimentum justo vitae pulvinar. Donec in dictum purus. Vivamus vitae aliquam ligula, at suscipit ipsum. Quisque in dolor auctor tortor facilisis maximus. Donec dapibus leo sed tincidunt aliquam.
+Abaixo, são relacionadas as variáveis disponibilizadas pela máquina:
+- 'time', 'codigo_falha', 'controle_on_off_ihm', 'corrente_comp1', 'rpm_condensador', 'temp_amb_retorno', 'setpoint_temp_ihm', 'temp_descarga_comp1', 'temp_meio_condensador', 'temp_descarga_comp2', 'temp_dissipador_calor', 'frequencia_compressor', 'corrente_comp2', 'modo_ihm', 'temp_succao', 'tensao_barramentoinv', 'corrente_compressor', 'temp_externa', 'potencia'
 
-### 5. Modelagem
+Os códigos de falha, apesar de relevantes para a máquina, não se mostraram interessantes para a identificação de anomalias nas variáveis coletadas, por isso, foi descartada das análises. Foi notado que este indicador representa a parte eletrônica da máquina, que não é objeto deste estudo.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar nisl vestibulum tortor fringilla, eget imperdiet neque condimentum. Proin vitae augue in nulla vehicula porttitor sit amet quis sapien. Nam rutrum mollis ligula, et semper justo maximus accumsan. Integer scelerisque egestas arcu, ac laoreet odio aliquet at. Sed sed bibendum dolor. Vestibulum commodo sodales erat, ut placerat nulla vulputate eu. In hac habitasse platea dictumst. Cras interdum bibendum sapien a vehicula.
+Em seguida, foram realizados cálculos estatísticos através de zcore e zscore modificado para identificação de dados discrepantes na base, que após testes, foi verificado o threshold adequado de 3.5. Os cálculos para anomalias negativas foram descartadas pois o objetivo é buscar altas temperaturas, correntes e frequências da máquina.
+Com a introdução manual de anomalias na base, o threshold escolhido se manteve adequado em detectar amostras anômalas.
 
-Proin feugiat nulla sem. Phasellus consequat tellus a ex aliquet, quis convallis turpis blandit. Quisque auctor condimentum justo vitae pulvinar. Donec in dictum purus. Vivamus vitae aliquam ligula, at suscipit ipsum. Quisque in dolor auctor tortor facilisis maximus. Donec dapibus leo sed tincidunt aliquam.
+
+### 5. Detecção por Clusterização
+
+Após testes de detecção de dados anômalos com os algoritmos k-means e DBSCAN, foi adotada a segunda opção por apresentar maior facilidade em separar dados com registros de valor razoavelmente alto.
+
+A princípio, o uso do método DBSCAN não foi adequado pelo fato das variáveis apresentarem ordens de grandeza diferentes, por exemplo, temperaturas entre 10 e 30°C e valores de potência na casa de 50.000VA. Pelo fato do algoritmo usar densidade de pontos para determinar vizinhanças, foi necessária a normalização dos dados para que todos os atributos estivessem na mesma ordem e resultado fosse efetivo.
+
 
 ### 6. Resultados
 
