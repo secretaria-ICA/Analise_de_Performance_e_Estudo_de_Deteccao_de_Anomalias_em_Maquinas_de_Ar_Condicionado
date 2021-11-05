@@ -76,7 +76,7 @@ Abaixo, são relacionadas as variáveis disponibilizadas pela máquina:
 
 Os códigos de falha, apesar de relevantes para a máquina, não se mostraram interessantes para a identificação de anomalias nas variáveis coletadas, por isso, foi descartada das análises. Foi notado que este indicador representa a parte eletrônica da máquina, que não é objeto deste estudo.
 
-Em seguida, foram realizados cálculos estatísticos através de zcore e zscore modificado para identificação de dados discrepantes na base, que após testes, foi verificado o threshold adequado de 3.5. Os cálculos para anomalias negativas foram descartadas pois o objetivo é buscar altas temperaturas, correntes e frequências da máquina.
+Em seguida, foram realizados cálculos estatísticos através de zcore e zscore modificado para identificação de dados discrepantes na base, que após testes, foi verificado o threshold adequado de 4. Os cálculos para anomalias negativas foram descartadas pois o objetivo é buscar altas temperaturas, correntes e frequências da máquina.
 Com a introdução manual de anomalias na base, o threshold escolhido se manteve adequado em detectar amostras anômalas.
 
 
@@ -87,17 +87,24 @@ Após testes de detecção de dados anômalos com os algoritmos k-means e DBSCAN
 A princípio, o uso do método DBSCAN não foi adequado pelo fato das variáveis apresentarem ordens de grandeza diferentes, por exemplo, temperaturas entre 10 e 30°C e valores de potência na casa de 50.000VA. Pelo fato do algoritmo usar densidade de pontos para determinar vizinhanças, foi necessária a normalização dos dados para que todos os atributos estivessem na mesma ordem e resultado fosse efetivo.
 
 
-### 6. Resultados
+### 6. Detecção por Aprendizado Supervisionado
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar nisl vestibulum tortor fringilla, eget imperdiet neque condimentum. Proin vitae augue in nulla vehicula porttitor sit amet quis sapien. Nam rutrum mollis ligula, et semper justo maximus accumsan. Integer scelerisque egestas arcu, ac laoreet odio aliquet at. Sed sed bibendum dolor. Vestibulum commodo sodales erat, ut placerat nulla vulputate eu. In hac habitasse platea dictumst. Cras interdum bibendum sapien a vehicula.
+Para testes de classificação por método de aprendizado supervisionado foram geradas amostras sintéticas de registros com anomalias e utilizado o método KNN de classificação, apresentando excelente resultado.
 
-Proin feugiat nulla sem. Phasellus consequat tellus a ex aliquet, quis convallis turpis blandit. Quisque auctor condimentum justo vitae pulvinar. Donec in dictum purus. Vivamus vitae aliquam ligula, at suscipit ipsum. Quisque in dolor auctor tortor facilisis maximus. Donec dapibus leo sed tincidunt aliquam.
 
-### 7. Conclusões
+### 7. Resultados
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar nisl vestibulum tortor fringilla, eget imperdiet neque condimentum. Proin vitae augue in nulla vehicula porttitor sit amet quis sapien. Nam rutrum mollis ligula, et semper justo maximus accumsan. Integer scelerisque egestas arcu, ac laoreet odio aliquet at. Sed sed bibendum dolor. Vestibulum commodo sodales erat, ut placerat nulla vulputate eu. In hac habitasse platea dictumst. Cras interdum bibendum sapien a vehicula.
+Com objetivo de realizar a detecção de anomalias foram realizados diversos testes, por vários métodos. 
+O primeiro foi a análise puramente estatística, envolvendo zcore e zscore modificado, com bons resultados para threshold de 4.
+Em seguida, foi utilizado método de clusterização DBSCAN, com muito bons resultados na separação de amostras de dados anômalos dos normais, se revelando também uma opção viável para resolução do problema.
+Ainda nos métodos de aprendizado não supervisionado, foi testado o algoritmo Isolation Forest, que não se mostrou eficaz, provavelmente devido à correlação dos dados.
+Por fim, foi utilizado um algoritmo de aprendizado supervisionado após a geração de dados sintéticos para balanceamento das classes de dados normais e anômalos, apresentando acurácia de 99,99%.
 
-Proin feugiat nulla sem. Phasellus consequat tellus a ex aliquet, quis convallis turpis blandit. Quisque auctor condimentum justo vitae pulvinar. Donec in dictum purus. Vivamus vitae aliquam ligula, at suscipit ipsum. Quisque in dolor auctor tortor facilisis maximus. Donec dapibus leo sed tincidunt aliquam.
+
+### 8. Conclusões
+
+Concluí-se portanto que o problema de detecção de anomalias para máquinas de ar condicionado com coleta de variáveis similares às mencionadas neste trabalho pode ser solucionado através de diversas possibilidades de algoritmos e metodologias. 
+A solução que se mostrou mais viável e eficiente foi a geração de dados sintéticos de classe anômala e uso de simples algoritmo de aprendizado supervisionado.
 
 ---
 
