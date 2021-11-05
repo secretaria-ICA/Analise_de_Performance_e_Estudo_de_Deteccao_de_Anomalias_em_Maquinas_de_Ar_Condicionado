@@ -1,17 +1,17 @@
 <!-- antes de enviar a versão final, solicitamos que todos os comentários, colocados para orientação ao aluno, sejam removidos do arquivo -->
 # Análise de Performance e Estudo de Detecção de Anomalias em Máquinas de Ar Condicionado
 
-#### Aluno: [Lucas Amaral Lassance Cabral](https://github.com/link_do_github)
-#### Orientador: [Leonardo Mendoza](https://github.com/link_do_github)
+#### Aluno: [Lucas Amaral Lassance Cabral](https://github.com/lassancetecnologia/tcc_bimaster_2019.4)
+#### Orientador: [Leonardo Mendoza]
 
 ---
 
 Trabalho apresentado ao curso [BI MASTER](https://ica.puc-rio.ai/bi-master) como pré-requisito para conclusão de curso e obtenção de crédito na disciplina "Projetos de Sistemas Inteligentes de Apoio à Decisão".
 
 <!-- para os links a seguir, caso os arquivos estejam no mesmo repositório que este README, não há necessidade de incluir o link completo: basta incluir o nome do arquivo, com extensão, que o GitHub completa o link corretamente -->
-- [Link para o código](https://github.com/link_do_repositorio). <!-- caso não aplicável, remover esta linha -->
+- [Link para o código](https://github.com/lassancetecnologia/tcc_bimaster_2019.4/blob/main/TCC_BI_MASTER_LUCAS_LASSANCE_2019_4_REV02.ipynb). <!-- caso não aplicável, remover esta linha -->
 
-- [Link para a monografia](https://link_da_monografia.com). <!-- caso não aplicável, remover esta linha -->
+
 
 
 
@@ -25,7 +25,7 @@ Máquinas de ar condicionado são muitas vezes itens críticos às operações p
 
 A performance da máquina foi estudada através de sua capacidade de manter a temperatura controlada dentro de certos limites definidos.
 
-Foram utilizados métodos puramente estatísticos e algoritmos de machine learning para identificar anomalias presentes nos dados e avaliar os resultados para novas amostras simuladas com anomalias bem definidas. Iniciando por análises de z-core e z-score modificado, passando por método de clusterização DBSCAN e concluindo com Isolation Forest foi possível realizar testes abrangentes e determinar as melhores soluções para o problema de identificação de anomalias. 
+Foram utilizados métodos puramente estatísticos e algoritmos de machine learning para identificar anomalias presentes nos dados e avaliar os resultados para novas amostras simuladas com anomalias bem definidas. Iniciando por análises de z-core e z-score modificado, passando por método de clusterização DBSCAN e concluindo com metodologia de treinamento supervisionado foi possível realizar testes abrangentes e determinar as melhores soluções para o problema de identificação de anomalias. 
 
 ### Abstract
 
@@ -35,7 +35,7 @@ Air conditioning machines are often critical items for building and industrial o
 
 The machine's performance was studied through its ability to keep the temperature controlled within certain defined limits.
 
-Purely statistical methods and machine learning algorithms were used to identify anomalies present in the data and evaluate the results for new simulated samples with well-defined anomalies. Starting with z-core and modified z-score analysis, going through the DBSCAN clustering method and ending with Isolation Forest, it was possible to perform extensive tests and determine the best solutions for the problem of identifying anomalies.
+Purely statistical methods and machine learning algorithms were used to identify anomalies present in the data and evaluate the results for new simulated samples with well-defined anomalies. Starting with z-core and modified z-score analysis, going through the DBSCAN clustering method and ending with supervised training method, it was possible to perform extensive tests and determine the best solutions for the problem of identifying anomalies.
 
 
 
