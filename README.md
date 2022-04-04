@@ -1,8 +1,8 @@
 <!-- antes de enviar a versão final, solicitamos que todos os comentários, colocados para orientação ao aluno, sejam removidos do arquivo -->
-# Análise de Performance e Estudo de Detecção de Anomalias em Máquinas de Ar Condicionado
+# Análise_de_Performance_e_Estudo_de_Detecção_de_Anomalias_em_Máquinas_de_Ar_Condicionado
 
 #### Aluno: [Lucas Amaral Lassance Cabral](https://github.com/lassancetecnologia/tcc_bimaster_2019.4)
-#### Orientador: Leonardo Mendoza
+#### Orientador: [Leonardo Mendoza](https://github.com/leofome8)
 
 ---
 
